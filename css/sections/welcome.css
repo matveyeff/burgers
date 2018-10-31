@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .welcome {
-  background: url("../../img/bg.jpg");
+  background: url("../img/bg.jpg");
   background-color: #b0bec5;
   background-size: cover;
   height: 100vh; }
