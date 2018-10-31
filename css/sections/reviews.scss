@@ -1,0 +1,22 @@
+.container__reviews {
+
+}
+
+.reviews {
+	display: flex;
+	height: 100vh;
+
+	&__list {
+		display: flex;
+		flex-flow: row wrap;
+		overflow: hidden;
+	}
+	&__item {
+		list-style-type: none;
+		width: 25%;
+		height: 50%;
+	}
+	&__img {
+		width: 100%;
+	}
+}

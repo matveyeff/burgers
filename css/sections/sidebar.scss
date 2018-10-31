@@ -1,0 +1,42 @@
+.sidebar {
+	position: fixed;
+	right: 3.125rem;
+	top: 5.625rem;
+	z-index: 100;
+}
+
+.nav {
+	display: flex;
+	&__list {
+		display: flex;
+		flex-flow: column wrap;
+		align-content: flex-start;
+		list-style: none;
+	}
+	&__item {
+		&_border {
+			width: 0.9375rem;
+			height: 0.9375rem;
+			border-radius: 50%;
+			border: 0.0625rem transparent solid;
+			margin-bottom: 0.4375rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&.active {
+				border-color: #fff;
+			}
+		}
+
+		&_link {
+			width: 0.3125rem;
+			height: 0.3125rem;
+			border-radius: 50%;
+			background: #fff;
+		}
+	}
+}
+
+.nav__item-border.active {
+	border-color: #fff;
+}

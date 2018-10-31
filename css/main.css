@@ -1,0 +1,265 @@
+@charset "UTF-8";
+.welcome {
+  background: url("../../img/bg.jpg");
+  background-color: #b0bec5;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+}
+
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+.menu__item {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.menu__item::after {
+  content: '•';
+  color: #fff;
+  margin-left: 15px;
+}
+.menu__item:last-child::after {
+  content: '';
+  margin-right: 0;
+}
+.menu__link {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.container__welcome {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content__desc {
+  line-height: 85px;
+}
+.content__desc_title {
+  font-size: 72px;
+  color: #f9b43b;
+  font-family: 'Gagalin Regular', sans-serif;
+}
+.content__desc_title2 {
+  font-size: 65px;
+  color: #fff;
+  font-family: 'Lifehack Medium', sans-serif;
+  line-height: 60px;
+}
+
+.button__orange {
+  background-color: #e45028;
+}
+
+.best {
+  background: url("../../img/bg_best.jpg") center;
+  background-color: #b0bec5;
+  background-size: cover;
+  height: 100vh;
+}
+.best__list {
+  display: flex;
+  justify-content: space-between;
+}
+.best__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  text-align: center;
+}
+.best__item_img {
+  margin-bottom: 35px;
+}
+.best__item_title {
+  font-family: 'Lifehack Medium', sans-serif;
+  font-size: 24px;
+  color: #2f3234;
+  margin-bottom: 15px;
+}
+.best__item_desc {
+  opacity: 0.8;
+  color: #2f3234;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.container__best {
+  padding: 170px 0;
+}
+
+.reviews {
+  display: flex;
+  height: 100vh;
+}
+.reviews__list {
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+}
+.reviews__item {
+  list-style-type: none;
+  width: 25%;
+  height: 50%;
+}
+.reviews__img {
+  width: 100%;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.section-title {
+  font-family: 'Gagalin Regular';
+  font-size: 72px;
+  color: #2f3234;
+  line-height: 64px;
+  text-align: center;
+}
+.section-title__best {
+  margin-bottom: 55px;
+}
+
+.button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  align-items: flex-start;
+}
+
+.sidebar {
+  position: fixed;
+  right: 3.125rem;
+  top: 5.625rem;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+}
+.nav__list {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  list-style: none;
+}
+.nav__item_border {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  border: 0.0625rem transparent solid;
+  margin-bottom: 0.4375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__item_border.active {
+  border-color: #fff;
+}
+.nav__item_link {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.nav__item-border.active {
+  border-color: #fff;
+}
+
+@font-face {
+  font-family: 'Lifehack Medium';
+  src: url("../../fonts/Lifehack_Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gagalin Regular';
+  src: url("../../fonts/Gagalin_Regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/Ubuntu-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/Ubuntu-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/Ubuntu-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/Ubuntu-B.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=main.css.map */

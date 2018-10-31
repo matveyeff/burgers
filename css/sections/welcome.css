@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.welcome {
+  background: url("../../img/bg.jpg");
+  background-color: #b0bec5;
+  background-size: cover;
+  height: 100vh; }
+
+.header {
+  display: flex; }
+
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.menu {
+  display: flex;
+  align-items: center; }
+  .menu__list {
+    display: flex;
+    align-items: center; }
+  .menu__item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px; }
+    .menu__item::after {
+      content: '•';
+      color: #fff;
+      margin-left: 15px; }
+    .menu__item:last-child::after {
+      content: '';
+      margin-right: 0; }
+  .menu__link {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none; }
+
+.container__welcome {
+  display: flex;
+  justify-content: space-between; }
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.content__desc {
+  line-height: 85px; }
+  .content__desc_title {
+    font-size: 72px;
+    color: #f9b43b;
+    font-family: 'Gagalin Regular', sans-serif; }
+  .content__desc_title2 {
+    font-size: 65px;
+    color: #fff;
+    font-family: 'Lifehack Medium', sans-serif;
+    line-height: 60px; }
+
+.button__orange {
+  background-color: #e45028; }
+
+/*# sourceMappingURL=welcome.css.map */
