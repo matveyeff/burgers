@@ -72,7 +72,7 @@
   justify-content: center; }
   .scroll-button::after {
     content: '';
-    background: url("../../img/arrow-scroll.png") center;
+    background: url("../img/arrow-scroll.png") center;
     width: 29px;
     height: 14px; }
 

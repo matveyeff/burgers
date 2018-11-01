@@ -13,9 +13,9 @@
     height: 50vh;
     filter: grayscale(100%); }
     .reviews__item:nth-child(1) {
-      background: url("../../img/review-1.jpg") center no-repeat/cover; }
+      background: url("../img/review-1.jpg") center no-repeat/cover; }
     .reviews__item:nth-child(2) {
-      background: url("../../img/review-2.jpg") center no-repeat/cover; }
+      background: url("../img/review-2.jpg") center no-repeat/cover; }
       .reviews__item:nth-child(2)::before {
         content: "";
         width: 100%;
@@ -24,17 +24,17 @@
         position: absolute;
         opacity: .6; }
     .reviews__item:nth-child(3) {
-      background: url("../../img/review-3.jpg") center no-repeat/cover; }
+      background: url("../img/review-3.jpg") center no-repeat/cover; }
     .reviews__item:nth-child(4) {
-      background: url("../../img/review-4.jpg") center no-repeat/cover; }
+      background: url("../img/review-4.jpg") center no-repeat/cover; }
     .reviews__item:nth-child(5) {
-      background: url("../../img/review-5.jpg") center no-repeat/cover; }
+      background: url("../img/review-5.jpg") center no-repeat/cover; }
     .reviews__item:nth-child(6) {
-      background: url("../../img/review-6.jpg") center no-repeat/cover; }
+      background: url("../img/review-6.jpg") center no-repeat/cover; }
     .reviews__item:nth-child(7) {
-      background: url("../../img/review-7.jpg") center no-repeat/cover; }
+      background: url("../img/review-7.jpg") center no-repeat/cover; }
     .reviews__item:nth-child(8) {
-      background: url("../../img/review-8.jpg") center no-repeat/cover; }
+      background: url("../img/review-8.jpg") center no-repeat/cover; }
   .reviews__content {
     padding: 100px 100px;
     z-index: 2; }

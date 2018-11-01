@@ -1,7 +1,3 @@
-.container__reviews {
-
-}
-
 .reviews {
 	height: 100vh;
   background-color: rgba(0, 0, 0, 0.31);
@@ -18,10 +14,10 @@
 		height: 50vh;
 		filter: grayscale(100%);
 		&:nth-child(1){
-			background: url('../../img/review-1.jpg') center no-repeat / cover;
+			background: url('../img/review-1.jpg') center no-repeat / cover;
 		}
 		&:nth-child(2){
-			background: url('../../img/review-2.jpg') center no-repeat / cover;
+			background: url('../img/review-2.jpg') center no-repeat / cover;
 			&::before {
 				content: "";
 				width: 100%;
@@ -32,22 +28,22 @@
 			}
 		}
 		&:nth-child(3){
-			background: url('../../img/review-3.jpg') center no-repeat / cover;
+			background: url('../img/review-3.jpg') center no-repeat / cover;
 		}
 		&:nth-child(4){
-			background: url('../../img/review-4.jpg') center no-repeat / cover;
+			background: url('../img/review-4.jpg') center no-repeat / cover;
 		}
 		&:nth-child(5){
-			background: url('../../img/review-5.jpg') center no-repeat / cover;
+			background: url('../img/review-5.jpg') center no-repeat / cover;
 		}
 		&:nth-child(6){
-			background: url('../../img/review-6.jpg') center no-repeat / cover;
+			background: url('../img/review-6.jpg') center no-repeat / cover;
 		}
 		&:nth-child(7){
-			background: url('../../img/review-7.jpg') center no-repeat / cover;
+			background: url('../img/review-7.jpg') center no-repeat / cover;
 		}
 		&:nth-child(8){
-			background: url('../../img/review-8.jpg') center no-repeat / cover;
+			background: url('../img/review-8.jpg') center no-repeat / cover;
 		}
 	}
 	&__content {
