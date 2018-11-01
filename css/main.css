@@ -18,9 +18,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .menu {
+  position: absolute;
+  right: 8%;
   display: flex;
   align-items: center;
 }
@@ -49,11 +52,6 @@
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
-}
-
-.container__welcome {
-  display: flex;
-  justify-content: space-between;
 }
 
 .content {
@@ -134,8 +132,8 @@
 }
 
 .reviews {
-  display: flex;
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.31);
 }
 .reviews__list {
   display: flex;
@@ -143,12 +141,73 @@
   overflow: hidden;
 }
 .reviews__item {
+  display: flex;
+  position: relative;
   list-style-type: none;
   width: 25%;
-  height: 50%;
+  height: 50vh;
+  filter: grayscale(100%);
 }
-.reviews__img {
+.reviews__item:nth-child(1) {
+  background: url("../../img/review-1.jpg") center no-repeat/cover;
+}
+.reviews__item:nth-child(2) {
+  background: url("../../img/review-2.jpg") center no-repeat/cover;
+}
+.reviews__item:nth-child(2)::before {
+  content: "";
   width: 100%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  opacity: .6;
+}
+.reviews__item:nth-child(3) {
+  background: url("../../img/review-3.jpg") center no-repeat/cover;
+}
+.reviews__item:nth-child(4) {
+  background: url("../../img/review-4.jpg") center no-repeat/cover;
+}
+.reviews__item:nth-child(5) {
+  background: url("../../img/review-5.jpg") center no-repeat/cover;
+}
+.reviews__item:nth-child(6) {
+  background: url("../../img/review-6.jpg") center no-repeat/cover;
+}
+.reviews__item:nth-child(7) {
+  background: url("../../img/review-7.jpg") center no-repeat/cover;
+}
+.reviews__item:nth-child(8) {
+  background: url("../../img/review-8.jpg") center no-repeat/cover;
+}
+.reviews__content {
+  padding: 100px 100px;
+  z-index: 2;
+}
+.reviews__content_title {
+  color: #fff;
+  font-family: 'Gagalin Regular', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.11px;
+}
+.reviews__content_desc {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.reviews__content_button {
+  background: #2f3234;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 html {

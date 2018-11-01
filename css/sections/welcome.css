@@ -15,9 +15,12 @@
 .container__header {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
 
 .menu {
+  position: absolute;
+  right: 8%;
   display: flex;
   align-items: center; }
   .menu__list {
@@ -41,10 +44,6 @@
     color: #fff;
     text-transform: uppercase;
     text-decoration: none; }
-
-.container__welcome {
-  display: flex;
-  justify-content: space-between; }
 
 .content {
   display: flex;
