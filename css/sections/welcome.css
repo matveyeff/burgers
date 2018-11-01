@@ -3,7 +3,11 @@
   background: url("../img/bg.jpg");
   background-color: #b0bec5;
   background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 0 40px 0; }
 
 .header {
   display: flex; }
@@ -45,21 +49,32 @@
 .content {
   display: flex;
   align-items: center;
-  justify-content: center; }
-
-.content__desc {
-  line-height: 85px; }
-  .content__desc_title {
-    font-size: 72px;
-    color: #f9b43b;
-    font-family: 'Gagalin Regular', sans-serif; }
-  .content__desc_title2 {
-    font-size: 65px;
-    color: #fff;
-    font-family: 'Lifehack Medium', sans-serif;
-    line-height: 60px; }
+  justify-content: center;
+  margin-bottom: 30px; }
+  .content__photo {
+    margin-right: 30px; }
+  .content__desc {
+    line-height: 85px; }
+    .content__desc_title {
+      font-size: 72px;
+      color: #f9b43b;
+      font-family: 'Gagalin Regular', sans-serif; }
+    .content__desc_title2 {
+      font-size: 65px;
+      color: #fff;
+      font-family: 'Lifehack Medium', sans-serif;
+      line-height: 60px; }
 
 .button__orange {
   background-color: #e45028; }
+
+.scroll-button {
+  display: flex;
+  justify-content: center; }
+  .scroll-button::after {
+    content: '';
+    background: url("../../img/arrow-scroll.png") center;
+    width: 29px;
+    height: 14px; }
 
 /*# sourceMappingURL=welcome.css.map */
