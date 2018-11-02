@@ -24,12 +24,9 @@
 .menu {
   position: absolute;
   right: 8%;
-  display: flex;
-  align-items: center;
 }
 .menu__list {
   display: flex;
-  align-items: center;
 }
 .menu__item {
   display: flex;
@@ -46,7 +43,6 @@
   margin-right: 0;
 }
 .menu__link {
-  font-family: 'Ubuntu', sans-serif;
   font-size: 13px;
   font-weight: 500;
   color: #fff;
@@ -65,6 +61,7 @@
 }
 .content__desc {
   line-height: 85px;
+  padding-top: 90px;
 }
 .content__desc_title {
   font-size: 72px;
@@ -189,7 +186,7 @@
   font-family: 'Gagalin Regular', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 28.11px;
+  line-height: 28px;
 }
 .reviews__content_desc {
   color: #fff;
@@ -205,7 +202,7 @@
   border-radius: 3px;
   box-sizing: border-box;
   color: white;
-  font-size: 0.8125rem;
+  font-size: 13px;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -253,13 +250,11 @@ body {
 .button {
   padding: 10px 15px;
   border-radius: 5px;
-  border: none;
   text-decoration: none;
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase;
   color: #fff;
-  align-items: flex-start;
 }
 
 .sidebar {
