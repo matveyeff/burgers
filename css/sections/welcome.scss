@@ -30,11 +30,8 @@
 .menu {
 	position: absolute;
 	right: 8%;
-	display: flex;
-	align-items: center;
 	&__list {
 		display: flex;
-		align-items: center;
 	}
 	&__item {
 		display: flex;
@@ -51,7 +48,6 @@
 		}
 	}
 	&__link {
-		font-family: 'Ubuntu', sans-serif;
 		font-size: 13px;
 		font-weight: 500;
 		color: #fff;
