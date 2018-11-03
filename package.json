@@ -1,0 +1,29 @@
+{
+  "name": "burgers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matveyeff/burgers.git"
+  },
+  "author": "Dmitrii Matveev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matveyeff/burgers/issues"
+  },
+  "homepage": "https://github.com/matveyeff/burgers#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "check": "^1.0.0",
+    "g": "^2.0.1",
+    "npm": "^6.4.1",
+    "updates": "^5.1.2"
+  }
+}
