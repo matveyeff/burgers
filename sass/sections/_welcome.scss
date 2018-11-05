@@ -11,6 +11,8 @@
 
 .header {
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .container__header {
@@ -21,8 +23,7 @@
 }
 
 .menu {
-	position: absolute;
-	right: 8%;
+	display: flex;
 	&__list {
 		display: flex;
 	}
@@ -30,6 +31,9 @@
 		display: flex;
 		align-items: center;
 		margin-right: 15px;
+		&:last-child {
+			margin-right: 0;
+		}
 		&::after {
 			content: '•';
 			color: #fff;
@@ -37,7 +41,6 @@
 		}
 		&:last-child::after {
 			content: '';
-			margin-right: 0;
 		}
 	}
 	&__link {
@@ -52,31 +55,29 @@
 .content {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	margin-bottom: 30px;
 	&__photo {
 		margin-right: 30px;
 	}
 	&__desc {
 		line-height: 85px;
 		padding-top: 75px;
-		&_title {
-			font-size: 72px;
-			color: #f9b43b;
-			font-family: 'Gagalin Regular', sans-serif;
-			margin-bottom: 10px;
-		}
-		&_title2 {
+	}
+	&__title {
+		font-size: 72px;
+		color: $yellow;
+		font-family: 'Gagalin Regular', sans-serif;
+		margin-bottom: 10px;
+	}
+	&__description {
 		font-size: 65px;
 		color: #fff;
 		font-family: 'Lifehack Medium', sans-serif;
 		line-height: 60px;
-		}
 	}
 }
 
 .button__orange {
-	background-color:#e45028;
+	background-color: $orange;
 }
 
 .scroll-button {

@@ -3,37 +3,37 @@
 	background-color: #b0bec5;
 	background-size: cover;
 	height: 100vh;
-
+	display: flex;
+	align-items: center;
 	&__list {
 		display: flex;
 		justify-content: space-between;
 	}
-
 	&__item {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		width: 280px;
 		text-align: center;
-		&_img {
-			margin-bottom: 35px;
-		}
-		&_title {
-			font-family: 'Lifehack Medium', sans-serif;
-			font-size: 24px;
-			color: #2f3234;
-			margin-bottom: 15px;
-		}
-		&_desc {
-			opacity: 0.8;
-			color: #2f3234;
-			font-size: 14px;
-			font-weight: 300;
-			line-height: 24px;
-		}
+	}	
+	&__img {
+		margin-bottom: 35px;
 	}
-}
-
-.container__best {
-	padding: 170px 0;
+	&__desc {
+		display: flex;
+		flex-direction: column;
+	}
+	&__title {
+		font-family: 'Lifehack Medium', sans-serif;
+		font-size: 24px;
+		color: #2f3234;
+		margin-bottom: 15px;
+	}
+	&__text {
+		opacity: 0.8;
+		color: #2f3234;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 24px;
+	}
 }

@@ -17,6 +17,16 @@ body {
 	min-height: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
 .wrapper {
 	position: relative;
 	height: 100%;
@@ -24,7 +34,18 @@ body {
 
 .container {
 	margin: 0 auto;
-	width: 940px;
+	width: 95%;
+	max-width: 940px;
+	height: 100%;
+	display: flex;
+	&_welcome {
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&_best {
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 
 .section-title {
