@@ -1,6 +1,7 @@
 // colors
 $orange: #e45028;
 $yellow: #f9b43b;
+$dark_orange: #c1401e;
 
 
 @import './normalize';
@@ -9,5 +10,8 @@ $yellow: #f9b43b;
 @import './sections/reviews';
 @import './layout/base.scss';
 @import './sections/sidebar';
+@import './sections/_team';
+@import './sections/_menu';
+@import './sections/contacts';
 
 @import './layout/fonts';

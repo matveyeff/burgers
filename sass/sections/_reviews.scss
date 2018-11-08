@@ -52,5 +52,9 @@
 		font-size: 13px;
 		text-transform: uppercase;
 		text-decoration: none;
+		&:hover {
+			background-color: #1f2122;
+			transition: .15s ease;
+		}
 	}
 }

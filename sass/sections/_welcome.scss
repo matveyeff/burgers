@@ -24,6 +24,7 @@
 
 .menu {
 	display: flex;
+	align-items: center;
 	&__list {
 		display: flex;
 	}
@@ -78,11 +79,16 @@
 
 .button__orange {
 	background-color: $orange;
+	&:hover {
+		background-color: $dark_orange;
+		transition: .15s ease;
+	}
 }
 
 .scroll-button {
 	display: flex;
 	justify-content: center;
+	align-self: center;
 	&::after {
 		content: '';
 		background: url('../img/arrow-scroll.png') center;
