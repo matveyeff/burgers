@@ -4,23 +4,33 @@
 	position: relative;
 }
 
-.menu-acco {
-	display: flex;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	&__item {
+.menu-acc {
+	&__list {
+		position: absolute;
 		display: flex;
-		height: 100%;
-	}
-	&__img {
-		width: 60px;
     height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+		background-color: rgba(20, 20, 20, 0.7);
+		list-style-type: none;
+		@include tablets {
+			max-width: 100%;
+		}
+	}
+	&__item {
     display: flex;
-    background-position: center center;
-    background-repeat: no-repeat;
-    text-decoration: none;
+	}
+	&__type-cover {
+		font-size: 2.5rem;
+    font-family: "Gagalin Regular";
+    color: #fff;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+		align-items: center;
+		background-size: cover;
+		background-position: center;
 		position: relative;
 		&::before {
 			content: '';
@@ -31,35 +41,38 @@
 			bottom: 0;
 			background: rgba(20, 20, 20, 0.7);
 		}
+		@include tablets {
+			width: 5.7rem;
+		}
 	}
-	&__content {
-		display: none;
-	}
-	&__link {
-		font-size: 2.5rem;
-    color: #fff;
-    font-family: 'Gagalin Regular', Helvetica, sans-serif;
-    text-align: center;
-    white-space: nowrap;
+	&__type-title {
+    transform: rotate(-90deg);
+    width: 90vh;
     position: absolute;
-    transform: rotate(-90deg) translate(-50%, -50%);
-    transform-origin: 0 0;
-    left: 50%;
-    top: 50%;
-    text-decoration: none;
+		cursor: pointer;
 	}
-	&__text {
-    font-weight: 300;
-    background: rgba(47, 50, 52, 0.93);
-    font-size: 0.875rem;
+	&__desc-wrapper {
+		background: rgba(47, 50, 52, 0.93);
+    width: 0;
+    overflow: hidden;
+		transition: width 0.5s;
+	}
+	&__desc {
+		padding: 3.75rem 2.1875rem;
     color: #fff;
-    padding: 10%;
-    line-height: 1.8;
-    height: 100%;
+    font-size: 0.875rem;
+    line-height: 1.714;
 	}
 }
 
-.menu-acco__item_active .menu-acco__content {
-	display: flex;
-	width: 400px;
+.menu-acc__item_active .menu-acc__desc-wrapper {
+  display: flex;
+	width: 40rem; 
+	@include tablets {
+		width: 100%;
+	}
+}
+
+.menu-acc__item_active .menu-acc__type-title {
+	color: $yellow;
 }

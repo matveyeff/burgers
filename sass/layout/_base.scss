@@ -1,6 +1,15 @@
 html {
 	position: relative;
 	min-height: 100%;
+	font-size: 16px;
+
+	@include tablets {
+		font-size: 14px;
+	}
+
+	@include phones {
+		font-size: 13px;
+	}
 }
 
 * {
@@ -34,12 +43,14 @@ h6 {
 .wrapper {
 	position: relative;
 	height: 100%;
+	overflow: hidden;
 }
 
 .container {
 	margin: 0 auto;
+	position: relative;
 	width: 95%;
-	max-width: 940px;
+	max-width: 58.75rem;
 	height: 100%;
 	display: flex;
 	&_welcome {
@@ -50,37 +61,74 @@ h6 {
 		flex-direction: column;
 		justify-content: center;
 	}
+	&_order {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 
 .section-title {
 	font-family: 'Gagalin Regular';
-	font-size: 72px;
+	font-size: 4.5rem;
 	color: #2f3234;
-	line-height: 64px;
+	line-height: 4rem;
 	text-align: center;
 	&__best {
-		margin-bottom: 55px;
+		margin-bottom: 3.4375rem;
+		@include tablets {
+			font-size: 5.14rem;
+		}
+		@include phones {
+			font-size: 3.8rem;
+		}
 	}
 	&__team {
 		color: $yellow;
-		text-align-last: left;
-		margin-bottom: 45px;
+		text-align: left;
+		margin-bottom: 2.8125rem;
+		@include tablets {
+			text-align: center;
+			font-size: 5.14rem;
+		}
+		@include phones {
+			font-size: 3.8rem;
+		}
 	}
 	&__menu {
 		text-align: left;
 		color: #fff;
 		position: absolute;
-		top: 150px;
-		left: 200px;
+		top: 9.375rem;
+		left: 12.5rem;
+		@include tablets {
+			font-size: 5.14rem;
+			top: 4.375rem;
+			left: 2.5rem;
+		}
+		@include phones {
+			font-size: 3.84rem;
+		}
+	}
+	&__order {
+		color: $yellow;
+		margin-bottom: 2.1875rem;
+		@include tablets {
+			font-size: 5.14rem;
+		}
+		@include phones {
+			font-size: 3.8rem;
+			line-height: 4.6rem;
+		}
 	}
 }
 
 .button {
 	display: flex;
-	padding: 10px 15px;
-	border-radius: 5px;
+	padding: 0.625rem 0.9375rem;
+	border-radius: 0.3125rem;
 	text-decoration: none;
-	font-size: 13px;
+	font-size: 0.8125rem;
 	font-weight: 400;
 	text-transform: uppercase;
 	color: #fff;

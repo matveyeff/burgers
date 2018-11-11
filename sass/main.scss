@@ -3,15 +3,20 @@ $orange: #e45028;
 $yellow: #f9b43b;
 $dark_orange: #c1401e;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
 
 @import './normalize';
+@import './layout/media';
 @import './sections/welcome';
 @import './sections/best';
 @import './sections/reviews';
 @import './layout/base.scss';
 @import './sections/sidebar';
-@import './sections/_team';
-@import './sections/_menu';
+@import './sections/team';
+@import './sections/menu';
 @import './sections/contacts';
+@import './sections/order';
 
 @import './layout/fonts';

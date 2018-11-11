@@ -15,7 +15,15 @@
     .reviews__hover {
       opacity: 1;
     }
-  }
+	}
+	@include tablets {
+		width: 50%;
+		height: 25vh;
+	}
+	@include phones {
+		width: 50%;
+		height: 25vh;
+	}
 }
 
 .reviews__hover {
@@ -26,30 +34,41 @@
   opacity: 0;
 	transition: opacity .15s ease;
 	&_content {
-		padding: 0 20px;
+		padding: 0 1.25rem;
+		@include tablets {
+			text-align: center;
+		}
 	}
 	&_title {
 		color: #fff;
 		font-family: 'Gagalin Regular', sans-serif;
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 400;
-		line-height: 28px;
+		line-height: 1.75rem;
+		@include phones {
+			font-size: 1.25rem;
+			margin-bottom: 1.5rem;
+			font-size: 1.84rem;
+		}
 	}
 	&_text {
 		color: #fff;
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 300;
-		line-height: 24px;
-		margin-bottom: 20px;
+		line-height: 1.5rem;
+		margin-bottom: 1.25rem;
+		@include phones {
+			display: none;
+		}
 	}
 	&_button {
 		background: #2f3234;
 		text-align: center;
-		padding: 10px 15px;
-		border-radius: 3px;
+		padding: 0.625rem 0.9375rem;
+		border-radius: 0.1875rem;
 		box-sizing: border-box;
-		color: white;
-		font-size: 13px;
+		color: #fff;
+		font-size: 0.8125rem;
 		text-transform: uppercase;
 		text-decoration: none;
 		&:hover {

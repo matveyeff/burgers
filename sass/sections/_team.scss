@@ -1,7 +1,11 @@
 .team {
-	background: url('../img/bg_team.jpg') center center / cover;
+	background: url('../img/bg_team.jpg') center / cover;
 	height: 100vh;
 	position: relative;
+	@include tablets {
+		background: url('../img/bg_team.jpg');
+		background-size: cover;
+	}
 	&__content {
 		position: absolute;
     top: 0;
@@ -10,58 +14,92 @@
     width: 50%;
 		background: rgba(47, 50, 52, 0.93);
 		padding: 7% 0 0 10%;
+		@include tablets {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			padding: 0;
+		}
 	}
 }
 
 .accordeon {
-	&__item	{
-		margin-bottom: 45px;
+	&__list {
+		@include tablets {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
-	&__link {
-		text-decoration: none;
+	&__item	{
+		margin-bottom: 2.8125rem;
+		@include tablets {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__title {
+		display: flex;
 		color: #fff;
-		position: relative;
+		font-family: 'Gagalin Regular', sans-serif;
+		font-size: 0.875rem;
+		font-weight: 400;
+		margin: 0.9375rem 0;
 		&::before {
 			content: "";
-			display: block;
-			position: absolute;
-			left: -20px;
-			top: 5px;
-			border-top: 8px solid #f9b43b;
-			border-left: 6px solid transparent;
-			border-right: 6px solid transparent;
-			border-bottom: 0px solid transparent;
+			display: flex;
+			align-self: flex-end;
+			border-bottom: 0.4375rem solid transparent;
+			border-top: 0.4375rem solid $yellow;
+			border-right: 0.375rem solid transparent;
+			border-left: 0.375rem solid transparent;
+			margin-right: 0.75rem;
 		}
-	}	
-	&__title {
-		color: #ffffff;
-		font-family: 'Gagalin Regular', sans-serif;
-		font-size: 14px;
-		font-weight: 400;
-		margin-bottom: 20px;
+		@include tablets {
+			font-size: 1.78rem;
+		}
+	}
+	&__desc {
+		max-width: 13rem;
+		padding-left: 0.75rem;
+		@include tablets {
+			max-width: 75%;
+			padding-left: 0;
+		}
 	}
 	&__content {
 		display: flex;
 		color: #fff;
 		display: none;
+		@include tablets {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	&__pic {
-		width: 100px;
-		height: 100px;
-		border-radius: 50%;
-		overflow: hidden;
 		display: flex;
-		justify-content: center;
-		margin-right: 20px;
+		@include tablets {
+			justify-content: center;
+			margin-right: 0;
+		}
 	}
 	&__img {
-		height: 100%;
+		width: 6.25rem;
+    height: 6.25rem;
+    background-size: cover;
+		border-radius: 50%;
+		@include tablets {
+			margin: 0.5rem 0;
+		}
 	}
 	&__position {
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 700;
-		line-height: 24px;
-		margin-bottom: 20px;
+		line-height: 1.5rem;
+		margin-bottom: 0.5rem;
 	}
 	&__text {
 		font-weight: 300;
@@ -70,8 +108,16 @@
 
 .accordeon__item_active .accordeon__content {
 	display: flex;
+	@include tablets {
+		flex-direction: column;
+	}
 }
 
-.accordeon__item_active .accordeon__link::before {
+.accordeon__item_active .accordeon__title::before {
 	transform: rotate(180deg);
+	align-self: flex-start;
+}
+
+.accordeon__item_active .accordeon__title {
+	color: $yellow;
 }

@@ -1,12 +1,12 @@
 .welcome {
-	background: url('../img/bg.jpg') ;
+	background: url('../img/bg.jpg') center;
 	background-color: #b0bec5;
 	background-size: cover;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 15px 0 40px 0;
+	padding: 0.9375rem 0 2.5rem 0;
 }
 
 .header {
@@ -27,25 +27,31 @@
 	align-items: center;
 	&__list {
 		display: flex;
+		@include tablets {
+			display: none;
+		}
+		@include phones {
+			display: none;
+		}
 	}
 	&__item {
 		display: flex;
 		align-items: center;
-		margin-right: 15px;
+		margin-right: 0.9375rem;
 		&:last-child {
 			margin-right: 0;
 		}
 		&::after {
 			content: '•';
 			color: #fff;
-			margin-left: 15px;
+			margin-left: 0.9375rem;
 		}
 		&:last-child::after {
 			content: '';
 		}
 	}
 	&__link {
-		font-size: 13px;
+		font-size: 0.8125rem;
 		font-weight: 500;
 		color: #fff;
 		text-transform: uppercase;
@@ -56,29 +62,58 @@
 .content {
 	display: flex;
 	align-items: center;
+	@include tablets {
+		flex-direction: column;
+		text-align: center;
+	}
 	&__photo {
-		margin-right: 30px;
+		margin-right: 1.875rem;
+	}
+	&__img {
+		width: 100%;
 	}
 	&__desc {
-		line-height: 85px;
-		padding-top: 75px;
+		line-height: 5.3125rem;
+		padding-top: 4.6875rem;
+		@include tablets {
+			padding-top: 2rem;
+		}
 	}
 	&__title {
-		font-size: 72px;
+		font-size: 4.5rem;
 		color: $yellow;
 		font-family: 'Gagalin Regular', sans-serif;
-		margin-bottom: 10px;
+		margin-bottom: 0.625rem;
+		@include tablets {
+			font-size: 5.65rem;
+		}
+		@include phones {
+			font-size: 5rem;
+		}
 	}
 	&__description {
-		font-size: 65px;
+		font-size: 4rem;
 		color: #fff;
 		font-family: 'Lifehack Medium', sans-serif;
-		line-height: 60px;
+		line-height: 3.75rem;
+		@include tablets {
+			font-size: 5.1rem;
+			line-height: 5rem;
+		}
+		@include phones {
+			font-size: 3.8rem;
+		}
 	}
 }
 
 .button__orange {
 	background-color: $orange;
+	@include phones {
+		margin-right: 1.875rem;
+	}
+	@include tablets {
+		margin-right: 1.875rem;
+	}
 	&:hover {
 		background-color: $dark_orange;
 		transition: .15s ease;
@@ -89,10 +124,28 @@
 	display: flex;
 	justify-content: center;
 	align-self: center;
-	&::after {
-		content: '';
-		background: url('../img/arrow-scroll.png') center;
-		width: 29px;
-		height: 14px;
+}
+
+.arrow-scroll {
+	width: 1.8rem;
+	height: 0.875rem;
+	fill: #fff;
+}
+
+.logo-icon {
+	width: 5.75rem;
+	height: 4.3125rem;
+}
+
+.mobile-menu {
+	fill: #fff;
+	width: 1.5rem;
+	height: 1.5rem;
+	display: none;
+	@include phones {
+		display: flex;
+	}
+	@include tablets {
+		display: flex;
 	}
 }

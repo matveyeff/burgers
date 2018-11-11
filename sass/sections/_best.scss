@@ -5,29 +5,61 @@
 	height: 100vh;
 	display: flex;
 	align-items: center;
+	@include tablets {
+		background: url('../img/bg_best.jpg') no-repeat;
+		background-size: cover;
+	}
 	&__list {
 		display: flex;
 		justify-content: space-between;
+		@include phones {
+			flex-direction: column;
+			margin: 0 auto;
+		}
 	}
 	&__item {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 280px;
+		width: 17.5rem;
 		text-align: center;
-	}	
-	&__img {
-		margin-bottom: 35px;
+		@include phones {
+			flex-direction: row;
+			width: 95%;
+			margin-bottom: 1.75rem;
+		}
 	}
+	&__pic {
+		display: flex;
+		width: 7rem;
+		height: 7rem;
+		background-repeat: no-repeat;
+		align-self: center;
+		@include phones {
+			display: flex;
+			width: 6.25rem;
+			height: 5.625rem;
+			background-repeat: no-repeat;
+			align-self: center;
+		}
+	}	
 	&__desc {
 		display: flex;
 		flex-direction: column;
+		@include phones {
+			text-align: left;
+			padding-left: 1.25rem;
+		}
 	}
 	&__title {
 		font-family: 'Lifehack Medium', sans-serif;
-		font-size: 24px;
+		font-size: 1.5rem;
 		color: #2f3234;
-		margin-bottom: 15px;
+		margin-bottom: 0.9375rem;
+		@include phones {
+			margin-bottom: 0;
+			font-size: 1.4rem;
+		}
 	}
 	&__text {
 		opacity: 0.8;
@@ -35,5 +67,12 @@
 		font-size: 14px;
 		font-weight: 300;
 		line-height: 24px;
+	}
+}
+
+.meat-icon, .hand-icon, .natural-icon {
+	margin-bottom: 2.1875rem;
+	@include phones {
+		margin-bottom: 0;
 	}
 }
