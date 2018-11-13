@@ -511,8 +511,6 @@ template {
   background-size: cover;
   background-position: center center;
   position: relative; }
-  .reviews__item:hover .reviews__hover {
-    opacity: 1; }
   @media (max-width: 768px) {
     .reviews__item {
       width: 50%;
@@ -521,6 +519,8 @@ template {
     .reviews__item {
       width: 50%;
       height: 25vh; } }
+  .reviews__item:hover .reviews__hover {
+    opacity: 1; }
 
 .reviews__hover {
   display: flex;
@@ -543,7 +543,7 @@ template {
     @media (max-width: 480px) {
       .reviews__hover_title {
         font-size: 1.25rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         font-size: 1.84rem; } }
   .reviews__hover_text {
     color: #fff;
@@ -564,9 +564,26 @@ template {
     font-size: 0.8125rem;
     text-transform: uppercase;
     text-decoration: none; }
+    @media (max-width: 480px) {
+      .reviews__hover_button {
+        display: none; } }
     .reviews__hover_button:hover {
       background-color: #1f2122;
       transition: .15s ease; }
+  .reviews__hover_button-mobile {
+    display: none; }
+    @media (max-width: 480px) {
+      .reviews__hover_button-mobile {
+        display: inline-block;
+        background: #2f3234;
+        text-align: center;
+        padding: 0.92rem 1.2rem;
+        border-radius: 0.35rem;
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        text-decoration: none; } }
 
 html {
   position: relative;
@@ -670,7 +687,8 @@ h6 {
     margin-bottom: 2.1875rem; }
     @media (max-width: 768px) {
       .section-title__order {
-        font-size: 5.14rem; } }
+        font-size: 5.14rem;
+        margin-bottom: 3.5rem; } }
     @media (max-width: 480px) {
       .section-title__order {
         font-size: 3.8rem;
@@ -768,7 +786,7 @@ h6 {
   font-family: 'Gagalin Regular', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
-  margin: 0.9375rem 0; }
+  margin-bottom: 0.9375rem; }
   .accordeon__title::before {
     content: "";
     display: flex;
@@ -810,6 +828,7 @@ h6 {
   width: 6.25rem;
   height: 6.25rem;
   background-size: cover;
+  background-position: center;
   border-radius: 50%; }
   @media (max-width: 768px) {
     .accordeon__img {
@@ -994,7 +1013,8 @@ h6 {
     justify-content: space-between; }
     @media (max-width: 768px) {
       .order__form {
-        flex-direction: column; } }
+        flex-direction: column;
+        align-items: center; } }
     @media (max-width: 480px) {
       .order__form {
         flex-direction: column; } }
@@ -1002,7 +1022,7 @@ h6 {
     width: 49%; }
     @media (max-width: 768px) {
       .order__form-col {
-        width: 100%; } }
+        width: 75%; } }
     @media (max-width: 480px) {
       .order__form-col {
         width: 100%; } }
@@ -1119,6 +1139,10 @@ h6 {
 order__form-input.disabled,
 .order__form-input.disabled:hover {
   cursor: default; }
+
+@media (max-width: 768px) {
+  .order__form-buttons .order__form-row {
+    margin-bottom: 30px; } }
 
 @font-face {
   font-family: 'Lifehack Medium';

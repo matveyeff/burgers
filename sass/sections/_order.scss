@@ -11,6 +11,7 @@
 		justify-content: space-between;
 		@include tablets {
 			flex-direction: column;
+			align-items: center;
 		}
 		@include phones {
 			flex-direction: column;
@@ -19,7 +20,7 @@
 	&__form-col {
 		width: 49%;
 		@include tablets {
-			width: 100%;
+			width: 75%;
 		}
 		@include phones {
 			width: 100%;
@@ -160,4 +161,10 @@
 order__form-input.disabled,
 .order__form-input.disabled:hover {
 	cursor: default; 
+}
+
+.order__form-buttons .order__form-row {
+	@include tablets {
+		margin-bottom: 30px;
+	}
 }

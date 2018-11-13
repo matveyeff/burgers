@@ -47,7 +47,7 @@
 		font-family: 'Gagalin Regular', sans-serif;
 		font-size: 0.875rem;
 		font-weight: 400;
-		margin: 0.9375rem 0;
+		margin-bottom: 0.9375rem;
 		&::before {
 			content: "";
 			display: flex;
@@ -89,7 +89,8 @@
 	&__img {
 		width: 6.25rem;
     height: 6.25rem;
-    background-size: cover;
+		background-size: cover;
+		background-position: center;
 		border-radius: 50%;
 		@include tablets {
 			margin: 0.5rem 0;
