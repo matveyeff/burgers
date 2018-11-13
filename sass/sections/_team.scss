@@ -93,7 +93,7 @@
 		background-position: center;
 		border-radius: 50%;
 		@include tablets {
-			margin: 0.5rem 0;
+			margin-bottom: 0.5rem;
 		}
 	}
 	&__position {

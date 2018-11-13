@@ -832,7 +832,7 @@ h6 {
   border-radius: 50%; }
   @media (max-width: 768px) {
     .accordeon__img {
-      margin: 0.5rem 0; } }
+      margin-bottom: 0.5rem; } }
 
 .accordeon__position {
   font-size: 0.875rem;
