@@ -483,6 +483,9 @@ template {
       color: #fff;
       z-index: 500;
       text-decoration: none; } }
+  @media (max-width: 480px) {
+    .cross {
+      right: 0.65rem; } }
 
 .best {
   background: url("../img/bg_best.jpg") center;
