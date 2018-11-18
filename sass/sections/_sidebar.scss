@@ -1,8 +1,11 @@
 .sidebar {
 	position: fixed;
-	right: 50px;
-	top: 100px;
+	right: 3.125rem;
+	top: 6.25rem;
 	z-index: 100;
+	@include phones {
+		right: 1.125rem;
+	}
 }
 
 .nav {
@@ -13,7 +16,7 @@
 		list-style: none;
 	}
 	&__item {
-		margin-bottom: 15px;
+		margin-bottom: 0.93rem;
 	}
 	&__link {
 		display: flex;

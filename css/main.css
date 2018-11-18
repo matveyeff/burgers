@@ -780,9 +780,12 @@ h6 {
 
 .sidebar {
   position: fixed;
-  right: 50px;
-  top: 100px;
+  right: 3.125rem;
+  top: 6.25rem;
   z-index: 100; }
+  @media (max-width: 480px) {
+    .sidebar {
+      right: 1.125rem; } }
 
 .nav {
   display: flex; }
@@ -791,7 +794,7 @@ h6 {
     flex-flow: column wrap;
     list-style: none; }
   .nav__item {
-    margin-bottom: 15px; }
+    margin-bottom: 0.93rem; }
   .nav__link {
     display: flex;
     align-items: center;
