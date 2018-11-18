@@ -307,11 +307,20 @@ template {
   flex-direction: column;
   justify-content: space-between;
   padding: 0.9375rem 0 2.5rem 0; }
+  @media (max-width: 768px) {
+    .welcome {
+      padding: 0; } }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media (max-width: 768px) {
+    .header {
+      width: 95%;
+      margin: 0 auto;
+      padding-top: 0.85rem;
+      z-index: 500; } }
 
 .container__header {
   display: flex;
@@ -322,14 +331,28 @@ template {
 .menu {
   display: flex;
   align-items: center; }
+  @media (max-width: 768px) {
+    .menu__nav {
+      justify-content: center;
+      align-items: center;
+      display: none;
+      background: rgba(47, 50, 52, 0.99);
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 300; } }
   .menu__list {
     display: flex; }
     @media (max-width: 768px) {
       .menu__list {
-        display: none; } }
-    @media (max-width: 480px) {
-      .menu__list {
-        display: none; } }
+        flex-direction: column;
+        position: absolute;
+        height: 30rem;
+        display: flex; } }
   .menu__item {
     display: flex;
     align-items: center;
@@ -342,12 +365,25 @@ template {
       margin-left: 0.9375rem; }
     .menu__item:last-child::after {
       content: ''; }
+    @media (max-width: 768px) {
+      .menu__item {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 0; }
+        .menu__item::after {
+          margin: 0;
+          margin-bottom: 0.8rem; } }
   .menu__link {
     font-size: 0.8125rem;
     font-weight: 500;
     color: #fff;
     text-transform: uppercase;
     text-decoration: none; }
+    @media (max-width: 768px) {
+      .menu__link {
+        margin-bottom: 0.8rem;
+        font-size: 1.7rem;
+        font-weight: 400; } }
 
 .content {
   display: flex;
@@ -355,9 +391,13 @@ template {
   @media (max-width: 768px) {
     .content {
       flex-direction: column;
-      text-align: center; } }
+      text-align: center;
+      width: 95%; } }
   .content__photo {
     margin-right: 1.875rem; }
+    @media (max-width: 768px) {
+      .content__photo {
+        margin-right: 0; } }
   .content__img {
     width: 100%; }
   .content__desc {
@@ -416,6 +456,9 @@ template {
   width: 5.75rem;
   height: 4.3125rem; }
 
+.logo {
+  z-index: 500; }
+
 .mobile-menu {
   fill: #fff;
   width: 1.5rem;
@@ -427,6 +470,19 @@ template {
   @media (max-width: 768px) {
     .mobile-menu {
       display: flex; } }
+
+.cross {
+  display: none; }
+  @media (max-width: 768px) {
+    .cross {
+      display: none;
+      position: fixed;
+      right: 1.25rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      color: #fff;
+      z-index: 500;
+      text-decoration: none; } }
 
 .best {
   background: url("../img/bg_best.jpg") center;
@@ -632,9 +688,16 @@ h6 {
   max-width: 58.75rem;
   height: 100%;
   display: flex; }
+  @media (max-width: 768px) {
+    .container {
+      width: 100%; } }
   .container_welcome {
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding-bottom: 2rem; }
+    @media (max-width: 768px) {
+      .container_welcome {
+        align-items: center; } }
   .container_best {
     flex-direction: column;
     justify-content: center; }
@@ -642,6 +705,18 @@ h6 {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+  .container_burgers {
+    display: flex;
+    align-items: center; }
+    @media (max-width: 768px) {
+      .container_burgers {
+        justify-content: center; } }
+    @media (max-width: 480px) {
+      .container_burgers {
+        width: 95%; } }
+  @media (max-width: 768px) {
+    .container_footer {
+      width: 95%; } }
 
 .section-title {
   font-family: 'Gagalin Regular';
@@ -695,7 +770,6 @@ h6 {
         line-height: 4.6rem; } }
 
 .button {
-  display: flex;
   padding: 0.625rem 0.9375rem;
   border-radius: 0.3125rem;
   text-decoration: none;
@@ -916,14 +990,16 @@ h6 {
   padding: 3.75rem 2.1875rem;
   color: #fff;
   font-size: 0.875rem;
-  line-height: 1.714; }
+  line-height: 1.714;
+  min-width: 33.75rem; }
 
 .menu-acc__item_active .menu-acc__desc-wrapper {
   display: flex;
-  width: 40rem; }
-  @media (max-width: 768px) {
+  width: 33.75rem; }
+  @media (max-width: 480px) {
     .menu-acc__item_active .menu-acc__desc-wrapper {
-      width: 100%; } }
+      z-index: 500;
+      width: 10rem; } }
 
 .menu-acc__item_active .menu-acc__type-title {
   color: #f9b43b; }
@@ -1014,7 +1090,9 @@ h6 {
     @media (max-width: 768px) {
       .order__form {
         flex-direction: column;
-        align-items: center; } }
+        align-items: center;
+        width: 90%;
+        margin: 0 auto; } }
     @media (max-width: 480px) {
       .order__form {
         flex-direction: column; } }
@@ -1143,6 +1221,140 @@ order__form-input.disabled,
 @media (max-width: 768px) {
   .order__form-buttons .order__form-row {
     margin-bottom: 30px; } }
+
+.burgers {
+  height: 100vh;
+  background-color: #f9b43b;
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%); }
+  .burgers__list {
+    list-style-type: none; }
+  .burgers__item {
+    display: flex; }
+    @media (max-width: 768px) {
+      .burgers__item {
+        flex-direction: column;
+        text-align: center; } }
+  .burgers__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    @media (max-width: 768px) {
+      .burgers__content {
+        align-items: center; } }
+  .burgers__title {
+    color: #fff;
+    font-family: 'Gagalin Regular', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    line-height: 4rem; }
+    @media (max-width: 768px) {
+      .burgers__title {
+        max-width: 30rem;
+        margin-bottom: 4rem; } }
+  .burgers__desc {
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    max-width: 27.5rem; }
+    @media (max-width: 768px) {
+      .burgers__desc {
+        max-width: 40rem;
+        margin-bottom: 3.35rem; } }
+  .burgers__order {
+    display: flex;
+    align-items: flex-end; }
+    @media (max-width: 768px) {
+      .burgers__order {
+        align-items: center; } }
+  .burgers__price {
+    color: #e35028;
+    font-family: 'Gagalin Regular', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: -0.111875rem;
+    margin-right: 1.875rem; }
+    .burgers__price span {
+      font-size: 1.875rem; }
+  .burgers__pic {
+    padding-top: 3.125rem;
+    position: relative; }
+    @media (max-width: 768px) {
+      .burgers__pic {
+        margin-bottom: 1.85rem; } }
+    @media (max-width: 480px) {
+      .burgers__pic {
+        padding-top: 5.125rem; } }
+  @media (max-width: 480px) {
+    .burgers__img {
+      width: 100%; } }
+  .burgers__consist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(227, 80, 40, 0.4);
+    width: 5.625rem;
+    height: 5.625rem;
+    border-radius: 0.3125rem;
+    z-index: 10; }
+    .burgers__consist:hover {
+      background: #e35028;
+      transition: .15s ease; }
+    .burgers__consist span {
+      color: #fff;
+      font-family: 'Gagalin Regular', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 400; }
+
+.slider-arrow {
+  display: flex;
+  width: 1.8125rem;
+  height: 1.6875rem; }
+  .slider-arrow_left {
+    transform: rotate(90deg); }
+  .slider-arrow_right {
+    transform: rotate(-90deg); }
+
+.calories {
+  display: block;
+  position: absolute;
+  opacity: 0.5;
+  font-family: 'Gagalin Regular', sans-serif;
+  color: #fff;
+  bottom: 0; }
+  @media (max-width: 768px) {
+    .calories {
+      right: 0;
+      top: 0; } }
+  .calories__pic {
+    position: relative; }
+    .calories__pic span {
+      display: block;
+      position: absolute;
+      transform: translate(40%, 0%);
+      bottom: 0.875rem;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.5rem;
+      text-align: center; }
+  .calories__icon {
+    bottom: 0;
+    left: 0;
+    width: 3.75rem;
+    height: 3.75rem; }
+  .calories__title {
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-align: center; }
+
+.burger-icon {
+  width: 2.875rem;
+  height: 2.75rem; }
 
 @font-face {
   font-family: 'Lifehack Medium';

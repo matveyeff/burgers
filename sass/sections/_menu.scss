@@ -61,15 +61,17 @@
 		padding: 3.75rem 2.1875rem;
     color: #fff;
     font-size: 0.875rem;
-    line-height: 1.714;
+		line-height: 1.714;
+		min-width: 33.75rem;
 	}
 }
 
 .menu-acc__item_active .menu-acc__desc-wrapper {
   display: flex;
-	width: 40rem; 
-	@include tablets {
-		width: 100%;
+	width: 33.75rem;
+	@include phones {
+		z-index: 500;
+		width: 10rem;
 	}
 }
 
