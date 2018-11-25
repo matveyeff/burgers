@@ -398,6 +398,9 @@ template {
     @media (max-width: 768px) {
       .content__photo {
         margin-right: 0; } }
+  @media (max-width: 768px) {
+    .content__img {
+      width: 100%; } }
   .content__desc {
     line-height: 5.3125rem;
     padding-top: 4.6875rem; }
