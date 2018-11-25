@@ -3,8 +3,8 @@
 	right: 3.125rem;
 	top: 6.25rem;
 	z-index: 100;
-	@include phones {
-		right: 1.125rem;
+	@include tablets {
+		display: none;
 	}
 }
 

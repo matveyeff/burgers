@@ -398,8 +398,6 @@ template {
     @media (max-width: 768px) {
       .content__photo {
         margin-right: 0; } }
-  .content__img {
-    width: 100%; }
   .content__desc {
     line-height: 5.3125rem;
     padding-top: 4.6875rem; }
@@ -710,7 +708,9 @@ h6 {
     justify-content: center; }
   .container_burgers {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    margin: 0;
+    overflow: hidden; }
     @media (max-width: 768px) {
       .container_burgers {
         justify-content: center; } }
@@ -773,6 +773,7 @@ h6 {
         line-height: 4.6rem; } }
 
 .button {
+  display: flex;
   padding: 0.625rem 0.9375rem;
   border-radius: 0.3125rem;
   text-decoration: none;
@@ -786,9 +787,9 @@ h6 {
   right: 3.125rem;
   top: 6.25rem;
   z-index: 100; }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     .sidebar {
-      right: 1.125rem; } }
+      display: none; } }
 
 .nav {
   display: flex; }
@@ -864,6 +865,7 @@ h6 {
   display: flex;
   color: #fff;
   font-family: 'Gagalin Regular', sans-serif;
+  text-decoration: none;
   font-size: 0.875rem;
   font-weight: 400;
   margin-bottom: 0.9375rem; }
@@ -1231,15 +1233,26 @@ order__form-input.disabled,
 .burgers {
   height: 100vh;
   background-color: #f9b43b;
-  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%); }
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   .burgers__list {
-    list-style-type: none; }
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    will-change: right;
+    transition: right .3s ease; }
   .burgers__item {
-    display: flex; }
+    display: flex;
+    width: 58.75rem; }
     @media (max-width: 768px) {
       .burgers__item {
         flex-direction: column;
         text-align: center; } }
+    @media (max-width: 480px) {
+      .burgers__item {
+        width: 72.3rem; } }
   .burgers__content {
     display: flex;
     flex-direction: column;
@@ -1294,7 +1307,7 @@ order__form-input.disabled,
         padding-top: 5.125rem; } }
   @media (max-width: 480px) {
     .burgers__img {
-      width: 100%; } }
+      width: 25%; } }
   .burgers__consist {
     display: flex;
     flex-direction: column;

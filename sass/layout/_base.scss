@@ -76,6 +76,8 @@ h6 {
 	&_burgers {
 		display: flex;
 		align-items: center;
+		margin: 0;
+		overflow: hidden;
 		@include tablets {
 			justify-content: center;
 		}
@@ -147,6 +149,7 @@ h6 {
 }
 
 .button {
+	display: flex;
 	padding: 0.625rem 0.9375rem;
 	border-radius: 0.3125rem;
 	text-decoration: none;

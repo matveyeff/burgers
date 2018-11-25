@@ -2,14 +2,25 @@
 	height: 100vh;
 	background-color: #f9b43b;
 	background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	&__list {
 		list-style-type: none;
+		display: flex;
+		position: relative;
+		will-change: right;
+		transition: right .3s ease;
 	}
 	&__item {
 		display: flex;
+		width: 58.75rem;
 		@include tablets {
 			flex-direction: column;
 			text-align: center;
+		}
+		@include phones {
+			width: 72.3rem;
 		}
 	}
 	&__content {
@@ -73,7 +84,7 @@
 	}
 	&__img {
 		@include phones {
-			width: 100%;
+			width: 25%;
 		}
 	}
 	&__consist {
