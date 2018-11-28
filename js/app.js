@@ -121,7 +121,7 @@ sendBtn.addEventListener('click', event => {
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-    xhr.send(formData);
+    xhr.send(orderData);
     xhr.addEventListener('load', () => {
       if (xhr.response.status) {
         const message = xhr.response.message;
