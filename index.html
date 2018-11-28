@@ -189,12 +189,21 @@
 						<div class="reviews__hover_content">
 							<h4 class="reviews__hover_title">Константин Спилберг</h4>
 							<p class="reviews__hover_text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-							<a href="" class="reviews__hover_button">Подробнее</a>
-							<a href="" class="reviews__hover_button-mobile">Читать отзыв</a>
+							<a href="#" class="reviews__hover_button">Подробнее</a>
+							<a href="#" class="reviews__hover_button-mobile">Читать отзыв</a>
 						</div>
 					</div>
 				</li>
 			</ul>
+			<div class="reviews-popup">
+				<div class="reviews-popup__block">
+					<div class="reviews-popup__head">
+						<div class="reviews-popup__author">Константин Спилберг</div>
+							<a href="#" id="reviews-popup__close" class="reviews-popup__close">✖</a>
+					</div>
+					<div class="reviews-popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+				</div>
+			</div>
 		</section>
 
 		<section class="team">
@@ -202,7 +211,7 @@
 				<h2 class="section-title section-title__team">Команда</h2>
 				<div class="accordeon">
 					<ul class="accordeon__list">
-						<li class="accordeon__item">
+						<li class="accordeon__item  accordeon__item_active">
 							<a href="#" class="accordeon__title">Даниэл Редклиф</a>
 							<div class="accordeon-wrapper">
 									<div class="accordeon__content">
@@ -214,7 +223,7 @@
 									</div>
 							</div>
 						</li>
-						<li class="accordeon__item accordeon__item_active">
+						<li class="accordeon__item">
 							<a href="#" class="accordeon__title">Ричард Джеймс</a>
 							<div class="accordeon-wrapper">
 									<div class="accordeon__content">
@@ -300,17 +309,17 @@
 		<section class="order">
 			<div class="container container_order">
 				<h2 class="section-title section-title__order">Закажите доставку</h2>
-				<form class="order__form-tag">
+				<form method="POST" class="order__form-tag">
 					<div class="order__form">
 						<div class="order__form-col">
 							<div class="order__form-row">
 								<label class="order__form-block order__form-block_left">
 							<span class="order__form-label">Имя</span>
-							<input class="order__form-input" name="name" type="text" placeholder="Имя">
+							<input class="order__form-input" id="name" name="name" type="text" placeholder="Имя">
 							</label>
 								<label class="order__form-block">
 							<span class="order__form-label">Телефон</span>
-							<input class="order__form-input" name="phone" type="text" placeholder="Телефон">
+							<input class="order__form-input" id="phone" name="phone" type="text" placeholder="Телефон">
 							</label>
 							</div>
 							<div class="order__form-row">
@@ -366,7 +375,7 @@
 							</label>
 								</div>
 								<div class="order__form-row">
-									<input class="order__form-button form-launcher disabled" type="submit" id="submit" value="Заказать">
+									<input class="order__form-button" method="POST" id="#sendBtn" type="submit" value="Заказать">
 									<input class="order__form-button order__form-button_reset" type="reset" value="Очистить">
 								</div>
 							</div>

@@ -87,3 +87,54 @@ left.addEventListener("click", function(e) {
 		slider.style.right = currentRight + "rem";
 	}
 });
+
+var openButton = document.querySelectorAll('.reviews__hover_button-mobile');
+var overlay = document.querySelector('.reviews-popup');
+var close = document.querySelector('.reviews-popup__close');
+
+for (var i = 0; i < openButton.length; i++) {
+	openButton[i].addEventListener('click', openOverlay);
+}
+
+function openOverlay(e) {
+	e.preventDefault();
+	overlay.style.display = 'flex';
+}
+
+close.addEventListener('click', closeOverlay);
+
+function closeOverlay(e) {
+	e.preventDefault();
+	overlay.style.display = 'none';
+}
+
+const orderForm = document.querySelector('.order__form-tag'),
+  sendBtn = document.querySelector('#sendBtn'),
+  name = orderForm.elements.name,
+  phone = orderForm.elements.phone,
+  comment = orderForm.elements.comment,
+  orderSection = document.querySelector('#order');
+
+sendBtn.addEventListener('click', event => {
+  event.preventDefault();
+
+  if (validateForm(orderForm)) {
+    let formData = new FormData(orderForm);
+    formData.append("name", orderForm.elements.name.value);
+    formData.append("phone", orderForm.elements.phone.value);
+    formData.append("comment", orderForm.elements.comment.value);
+    formData.append("to", 'dm@gmail.com');
+
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData);
+    xhr.addEventListener('load', () => {
+      if (xhr.response.status) {
+        const message = xhr.response.message;
+        orderSection.appendChild(createResponse(message));
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  };
+});

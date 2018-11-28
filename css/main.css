@@ -559,6 +559,9 @@ template {
     .meat-icon, .hand-icon, .natural-icon {
       margin-bottom: 0; } }
 
+.reviews {
+  position: relative; }
+
 .reviews__list {
   list-style-type: none;
   height: 100%;
@@ -644,6 +647,56 @@ template {
         font-size: 1rem;
         text-transform: uppercase;
         text-decoration: none; } }
+
+.reviews-popup {
+  position: absolute;
+  background: rgba(47, 50, 52, 0.93);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.reviews-popup__block {
+  width: 54%;
+  background-color: #fff;
+  border-radius: 0.3125rem;
+  padding: 1.5625rem 1.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+  @media (max-width: 480px) {
+    .reviews-popup__block {
+      width: 95%; } }
+
+.reviews-popup__head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.9375rem; }
+
+.reviews-popup__author {
+  font-family: 'Gagalin Regular', sans-serif;
+  font-size: 1rem; }
+
+.reviews-popup__close {
+  display: flex;
+  right: 0;
+  top: 0.9375rem;
+  opacity: .7;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #e45028; }
+
+.reviews-popup__text {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.72rem; }
 
 html {
   position: relative;
