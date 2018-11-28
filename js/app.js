@@ -138,3 +138,27 @@ sendBtn.addEventListener('click', event => {
     });
   };
 });
+
+function serverResponse(text) {
+  const overlayElement = document.createElement("div");
+  overlayElement.classList.add("overlay");
+
+  const template = document.querySelector("#responseTemplate");
+  overlayElement.innerHTML = template.innerHTML;
+
+  const closeElement = overlayElement.querySelector(".overlay__close--response");
+  closeElement.addEventListener("click", function () {
+    orderSection.removeChild(overlayElement);
+    document.body.style.overflow = 'initial';
+  });
+
+  const wrapElement = overlayElement.querySelector(".overlay__wrap");
+  wrapElement.addEventListener("click", function () {
+    orderSection.removeChild(overlayElement);
+    document.body.style.overflow = 'initial';
+  });
+
+  const messageElement = overlayElement.querySelector(".overlay__message");
+  messageElement.innerHTML = text;
+
+  return overlayElement;
