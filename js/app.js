@@ -108,23 +108,22 @@ function closeOverlay(e) {
 	overlay.style.display = 'none';
 }
 
-const orderForm = document.querySelector('.order__form-tag'),
-  sendBtn = document.querySelector('#sendBtn'),
-  name = orderForm.elements.name,
-  phone = orderForm.elements.phone,
-  comment = orderForm.elements.comment,
-	orderSection = document.querySelector('#order');
+const orderForm = document.querySelector('.order__form-tag');
+const sendBtn = document.querySelector('#sendBtn');
+const name = orderForm.elements.name;
+const phone = orderForm.elements.phone;
+const comment = orderForm.elements.comment;
 		
 sendBtn.addEventListener('click', event => {
 	event.preventDefault();
 
-	const xhr = new XMLHttpRequest();
-	xhr.responseType = 'json';
-	xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-	xhr.send(formData);
-	xhr.addEventListener('load', () => {
-		if (xhr.response.status) {
-			const message = xhr.response.message;
+	const xreq = new XMLHttpRequest();
+	xreq.responseType = 'json';
+	xreq.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+	xreq.send(formData);
+	xreq.addEventListener('load', () => {
+		if (xreq.response.status) {
+			const message = xreq.response.message;
 			orderSection.appendChild(createResponse(message));
 			console.log(message);
 		}
