@@ -131,14 +131,14 @@ sendBtn.addEventListener('click', event => {
 	xreq.addEventListener('load', () => {
 		if (xreq.response.status) {
 			const message = xreq.response.message;
-			orderSection.appendChild(serverResponse(message));
+			orderSection.appendChild(createResponse(message));
 			console.log(message);
 		}
 	});
 });
 	
 
-function serverResponse(text) {
+function createResponse(text) {
   const overlayElement = document.createElement("div");
   overlayElement.classList.add("overlay");
 
