@@ -181,7 +181,7 @@ sendBtn.addEventListener('click', event => {
       if (xhr.response.status) {
         const message = xhr.response.message;
         orderSection.appendChild(createResponse(message));
-        document.body.style.overflow = 'hidden';
+				console.log(message);
       }
     });
   };
