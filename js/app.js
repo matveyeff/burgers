@@ -114,73 +114,21 @@ const orderForm = document.querySelector('.order__form-tag'),
   phone = orderForm.elements.phone,
   comment = orderForm.elements.comment,
 	orderSection = document.querySelector('#order');
-	
-name.addEventListener('keydown', function (event) {
-	let isLetter = false,
-		isControl = false;
-
-	if (isFinite(event.key) == false) {
-		isLetter = true;
-	};
-
-	if (event.key == "ArrowLeft" || event.key == "ArrowRight" || event.key == "Backspace" || event.keyCode == '32') {
-		isControl = true;
-	}
-
-	if (!isLetter && !isControl) {
-		event.preventDefault();
-	};
-});
-
-const onlyDigit = document.querySelectorAll('.onlyDigit');
-
-for (const element of onlyDigit) {
-	element.addEventListener('keydown', function (event) {
-		let isDigit = false;
-		let isDash = false;
-		isControl = false;
-
-		if (event.key >= 0 || event.key <= 9) {
-			isDigit = true;
-		};
-
-		if (event.key == '-') {
-			isDash = true;
-		};
-
-		if (event.key == "ArrowLeft" || event.key == "ArrowRight" || event.key == "Backspace") {
-			isControl = true;
-		}
-
-		if (!isDigit && !isDash && !isControl) {
-			event.preventDefault();
-		};
-	});
-}
 		
-
 sendBtn.addEventListener('click', event => {
 	event.preventDefault();
 
-	if (validateForm(orderForm)) {
-		let formData = new FormData(orderForm);
-		formData.append("name", orderForm.elements.name.value);
-		formData.append("phone", orderForm.elements.phone.value);
-		formData.append("comment", orderForm.elements.comment.value);
-		formData.append("to", 'dm@gmail.com');
-
-		const xhr = new XMLHttpRequest();
-		xhr.responseType = 'json';
-		xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-		xhr.send(formData);
-		xhr.addEventListener('load', () => {
-			if (xhr.response.status) {
-				const message = xhr.response.message;
-				orderSection.appendChild(createResponse(message));
-				console.log(message);
-			}
-		});
-	};
+	const xhr = new XMLHttpRequest();
+	xhr.responseType = 'json';
+	xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+	xhr.send(formData);
+	xhr.addEventListener('load', () => {
+		if (xhr.response.status) {
+			const message = xhr.response.message;
+			orderSection.appendChild(createResponse(message));
+			console.log(message);
+		}
+	});
 });
 	
 
