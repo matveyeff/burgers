@@ -225,13 +225,11 @@ function createResponse(text) {
   const closeElement = overlayElement.querySelector(".overlay__close--response");
   closeElement.addEventListener("click", function () {
     orderSection.removeChild(overlayElement);
-    document.body.style.overflow = 'initial';
   });
 
   const wrapElement = overlayElement.querySelector(".overlay__wrap");
   wrapElement.addEventListener("click", function () {
     orderSection.removeChild(overlayElement);
-    document.body.style.overflow = 'initial';
   });
 
   const messageElement = overlayElement.querySelector(".overlay__message");
