@@ -127,8 +127,9 @@ sendBtn.addEventListener('click', event => {
         const message = xhr.response.message;
         orderSection.appendChild(createResponse(message));
 				document.body.style.overflow = 'hidden';
-				var result = response.json();
-    		console.log(result);
+				return this._http.get(`api/data`)
+				.map((response: Response) => response.json())
+				.do(value => console.log(value));
       }
     });
   };
