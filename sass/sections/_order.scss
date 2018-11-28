@@ -171,6 +171,12 @@ order__form-input.disabled,
 	}
 }
 
+.overlay {
+	max-width: 200px;
+	max-height: 200px;
+	background-color: #fff;
+}
+
 .overlay__wrap {
 	display: -webkit-box;
 	display: -ms-flexbox;

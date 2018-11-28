@@ -181,7 +181,6 @@ sendBtn.addEventListener('click', event => {
       if (xhr.response.status) {
         const message = xhr.response.message;
         orderSection.appendChild(createResponse(message));
-				console.log(message);
       }
     });
   };
