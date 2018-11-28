@@ -117,6 +117,12 @@ const comment = orderForm.elements.comment;
 sendBtn.addEventListener('click', event => {
 	event.preventDefault();
 
+	let formData = new FormData(orderForm);
+	formData.append("name", orderForm.elements.name.value);
+	formData.append("phone", orderForm.elements.phone.value);
+	formData.append("comment", orderForm.elements.comment.value);
+	formData.append("to", 'dm@gmail.com');
+
 	const xreq = new XMLHttpRequest();
 	xreq.responseType = 'json';
 	xreq.open('POST', 'https://webdev-api.loftschool.com/sendmail');
