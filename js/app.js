@@ -113,6 +113,7 @@ const sendBtn = document.querySelector('#sendBtn');
 const name = orderForm.elements.name;
 const phone = orderForm.elements.phone;
 const comment = orderForm.elements.comment;
+const orderSection = document.querySelector('#order');
 		
 sendBtn.addEventListener('click', event => {
 	event.preventDefault();
@@ -130,7 +131,7 @@ sendBtn.addEventListener('click', event => {
 	xreq.addEventListener('load', () => {
 		if (xreq.response.status) {
 			const message = xreq.response.message;
-			orderSection.appendChild(createResponse(message));
+			orderSection.appendChild(serverResponse(message));
 			console.log(message);
 		}
 	});
