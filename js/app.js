@@ -88,22 +88,22 @@ left.addEventListener("click", function(e) {
 	}
 });
 
-var openButton = document.querySelectorAll('.reviews__hover_button-mobile');
+var openButtonMobile = document.querySelectorAll('.reviews__hover_button-mobile');
 var overlay = document.querySelector('.reviews-popup');
 var close = document.querySelector('.reviews-popup__close');
 
-for (var i = 0; i < openButton.length; i++) {
-	openButton[i].addEventListener('click', openOverlay);
+for (var i = 0; i < openButtonMobile.length; i++) {
+	openButtonMobile[i].addEventListener('click', openOverlayMobile);
 }
 
-function openOverlay(e) {
+function openOverlayMobile(e) {
 	e.preventDefault();
 	overlay.style.display = 'flex';
 }
 
-close.addEventListener('click', closeOverlay);
+close.addEventListener('click', closeOverlayMobile);
 
-function closeOverlay(e) {
+function closeOverlayMobile(e) {
 	e.preventDefault();
 	overlay.style.display = 'none';
 }
