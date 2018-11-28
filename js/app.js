@@ -118,13 +118,6 @@ const orderForm = document.querySelector('.order__form-tag'),
 sendBtn.addEventListener('click', event => {
   event.preventDefault();
 
-  if (validateForm(orderForm)) {
-    let formData = new FormData(orderForm);
-    formData.append("name", orderForm.elements.name.value);
-    formData.append("phone", orderForm.elements.phone.value);
-    formData.append("comment", orderForm.elements.comment.value);
-    formData.append("to", 'dm@gmail.com');
-
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
@@ -133,7 +126,9 @@ sendBtn.addEventListener('click', event => {
       if (xhr.response.status) {
         const message = xhr.response.message;
         orderSection.appendChild(createResponse(message));
-        document.body.style.overflow = 'hidden';
+				document.body.style.overflow = 'hidden';
+				var result = response.json();
+    		console.log(result);
       }
     });
   };
@@ -149,13 +144,11 @@ function serverResponse(text) {
   const closeElement = overlayElement.querySelector(".overlay__close--response");
   closeElement.addEventListener("click", function () {
     orderSection.removeChild(overlayElement);
-    document.body.style.overflow = 'initial';
   });
 
   const wrapElement = overlayElement.querySelector(".overlay__wrap");
   wrapElement.addEventListener("click", function () {
     orderSection.removeChild(overlayElement);
-    document.body.style.overflow = 'initial';
   });
 
   const messageElement = overlayElement.querySelector(".overlay__message");
