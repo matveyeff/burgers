@@ -159,3 +159,4 @@ function serverResponse(text) {
   messageElement.innerHTML = text;
 
   return overlayElement;
+}
