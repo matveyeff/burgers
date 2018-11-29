@@ -192,8 +192,8 @@ sendBtn.addEventListener('click', event => {
     formData.append("to", 'mail@mail.com');
 
     const xhr = new XMLHttpRequest();
-
-    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+    xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(formData);
     xhr.addEventListener('load', () => {
       if (xhr.response.status) {
