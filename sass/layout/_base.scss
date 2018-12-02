@@ -68,6 +68,11 @@ h6 {
 		flex-direction: column;
 		justify-content: center;
 	}
+	&_video {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 	&_order {
 		display: flex;
 		flex-direction: column;
@@ -76,8 +81,8 @@ h6 {
 	&_burgers {
 		display: flex;
 		align-items: center;
-		margin: 0;
 		overflow: hidden;
+		margin: 0;
 		@include tablets {
 			justify-content: center;
 		}
@@ -119,6 +124,9 @@ h6 {
 			font-size: 3.8rem;
 		}
 	}
+	&__video {
+		margin-bottom: 4rem;
+	}
 	&__menu {
 		text-align: left;
 		color: #fff;
@@ -157,4 +165,15 @@ h6 {
 	font-weight: 400;
 	text-transform: uppercase;
 	color: #fff;
+}
+
+.maincontent {
+	height: 100%;
+	min-height: 40.625rem;
+	-webkit-transition: -webkit-transform 1s;
+	transition: -webkit-transform 1s;
+	-o-transition: transform 1s;
+	transition: transform 1s;
+	transition: transform 1s, -webkit-transform 1s;
+	will-change: transform;
 }

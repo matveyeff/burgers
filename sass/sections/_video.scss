@@ -1,0 +1,12 @@
+.video {
+	background: url('../img/bg_video.jpg') center;
+	background-color: #b0bec5;
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	@include tablets {
+		background: url('../img/bg_video.jpg') no-repeat;
+		background-size: cover;
+	}
+}	
