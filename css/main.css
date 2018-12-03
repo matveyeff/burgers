@@ -1578,6 +1578,9 @@ order__form-input.disabled,
   width: 40%;
   background-color: #3e3e3e;
   padding: 0 1.25rem; }
+  @media (max-width: 768px) {
+    .player {
+      width: 60%; } }
 
 .player__play {
   margin-right: 0.625rem;
@@ -1692,6 +1695,9 @@ order__form-input.disabled,
   .player__big-btn-img:hover {
     cursor: pointer;
     opacity: 1; }
+  @media (max-width: 768px) {
+    .player__big-btn-img {
+      width: 3.75rem; } }
 
 .player--active .player__big-btn {
   display: none; }

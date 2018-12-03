@@ -38,6 +38,9 @@
 	width: 40%;
 	background-color: #3e3e3e;
 	padding: 0 1.25rem;
+	@include tablets {
+		width: 60%;
+	}
 }
 
 .player__play {
@@ -170,6 +173,9 @@
 	&:hover {
 		cursor: pointer;
 		opacity: 1;
+	}
+	@include tablets {
+		width: 3.75rem;
 	}
 }
 
