@@ -83,6 +83,8 @@ h6 {
 		align-items: center;
 		overflow: hidden;
 		margin: 0 auto;
+    max-width: 980px;
+    width: 100%;
 		@include tablets {
 			justify-content: center;
 		}

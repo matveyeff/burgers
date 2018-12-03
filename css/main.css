@@ -770,7 +770,9 @@ h6 {
     display: flex;
     align-items: center;
     overflow: hidden;
-    margin: 0 auto; }
+    margin: 0 auto;
+    max-width: 980px;
+    width: 100%; }
     @media (max-width: 768px) {
       .container_burgers {
         justify-content: center; } }
@@ -1530,6 +1532,11 @@ order__form-input.disabled,
 .burgers__consist:hover .burgers-comp {
   opacity: .9;
   visibility: visible; }
+
+.slider-wrapper {
+  flex: 1;
+  overflow: hidden;
+  width: 58.75rem; }
 
 .video {
   background: url("../img/bg_video.jpg") center;
