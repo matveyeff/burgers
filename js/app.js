@@ -369,3 +369,96 @@ for (var i = 0; i < navigationLink.length; i++) {
 	navigationLink[i].addEventListener('click', function () {
 	navigationItem.classList.toggle('nav__item_active');   
 })};
+
+const videoEl = document.querySelector('.work__video-window'),
+  videoWindow = $('.work__video-window'),
+  videoContainer = $('.work__player'),
+  playBtns = $('.playBtn'),
+  volumeBtn = $('.player__volume'),
+  volumeLevelBtn = $('.player__bar--volume').after;
+
+playBtns.on('click', e => {
+  playVideo();
+});
+
+videoWindow.on('click', e => {
+  playVideo();
+});
+
+volumeBtn.on('click', e => {
+  if (videoEl.volume != 0) {
+    videoEl.volume = 0;
+  } else {
+    videoEl.volume = 1;
+  };
+  volumeBtn.toggleClass('player__volume--mute');
+});
+
+const playVideo = function () {
+  if (videoEl.paused) {
+    videoEl.play();
+  } else {
+    videoEl.pause();
+  };
+  videoContainer.toggleClass('player--active');
+};
+
+$(document).ready(function(){
+	var controls = {
+			video: $("#myvideo")               
+	};
+							
+	var video = controls.video[0];
+
+var controls = {
+	total: $("#total"),
+	buffered: $("#buffered"),
+	progress: $("#current"),
+	duration: $("#duration"),
+	currentTime: $("#currenttime"),
+	hasHours: false,
+};              
+
+video.addEventListener("canplay", function() {
+	controls.hasHours = (video.duration / 3600) >= 1.0;                    
+	controls.duration.text(formatTime(video.duration, controls.hasHours));
+	controls.currentTime.text(formatTime(0),controls.hasHours);
+}, false);
+
+function formatTime(time, hours) {
+	if (hours) {
+			var h = Math.floor(time / 3600);
+			time = time - h * 3600;
+									
+			var m = Math.floor(time / 60);
+			var s = Math.floor(time % 60);
+									
+			return h.lead0(2)  + ":" + m.lead0(2) + ":" + s.lead0(2);
+	} else {
+			var m = Math.floor(time / 60);
+			var s = Math.floor(time % 60);
+									
+			return m.lead0(2) + ":" + s.lead0(2);
+	}
+}
+					
+Number.prototype.lead0 = function(n) {
+	var nz = "" + this;
+	while (nz.length < n) {
+			nz = "0" + nz;
+	}
+	return nz;
+};
+
+video.addEventListener("timeupdate", function() {
+	controls.currentTime.text(formatTime(video.currentTime, controls.hasHours));
+									
+	var progress = Math.floor(video.currentTime) / Math.floor(video.duration);
+	controls.progress[0].style.left = Math.floor(progress * controls.total.width()) + "px";
+}, false);
+
+controls.total.click(function(e) {
+	var x = (e.pageX - this.offsetLeft)/$(this).left();
+	video.currentTime = x * video.duration;
+});
+})

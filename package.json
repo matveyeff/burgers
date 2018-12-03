@@ -24,6 +24,7 @@
     "check": "^1.0.0",
     "g": "^2.0.1",
     "gulp-install": "^1.1.0",
+    "mediaelement": "^4.2.9",
     "npm": "^6.4.1",
     "updates": "^5.1.2"
   },

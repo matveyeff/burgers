@@ -211,19 +211,40 @@
 			</section>
 
 			<section class="section video" data-anchor="section_video">
-				<div class="container container_video">
-					<h2 class="section-title section-title__video">Как мы работаем</h2>
-					<div class="video__wrapper">
-						<div class="video__content">
-							<iframe width="920" height="518" src="https://www.youtube.com/embed/1jELrDwYn6k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<h2 class="section-title section-title_video">Как мы работаем</h2>
+				<div class="work__player">
+					<div class="player__video">
+						<video id="myvideo" class="work__video-window" src="./video/video.mp4"></video>
+					</div>
+					<div class="player">
+						<div class="player__play playBtn">
+							<span></span>
+							<svg class="player__play-img">
+								<use xlink:href="./icons/sprite.svg#play" />
+							</svg>
 						</div>
-						<div class="video__toolbar">
-
+						<div class="player__scroll player__scroll--progress" id="progress">
+							<div class="player__bar player__bar-progress" id="total">
+								<div class="player__progress-btn" id="current"></div>
+							</div>
+						</div>
+						<div class="player__volume">
+							<svg class="player__volume-img">
+								<use xlink:href="./icons/sprite.svg#volume" />
+							</svg>
+						</div>
+						<div class="player__scroll player__scroll--volume">
+							<div class="player__bar player__bar--volume">
+									<div class="player__volume-btn"></div>
+							</div>
 						</div>
 					</div>
+					<div class="player__big-btn playBtn">
+						<svg class="player__big-btn-img">
+							<use xlink:href="./icons/sprite.svg#play" />
+						</svg>
+					</div>
 				</div>
-
-
 			</section>
 
 			<section class="section team" data-anchor="section_team">
