@@ -462,3 +462,21 @@ controls.total.click(function(e) {
 	video.currentTime = x * video.duration;
 });
 })
+
+$('.player__scroll--volume').mousedown(function (e) {
+  let newPos = e.pageX - $(e.currentTarget).offset().left,
+    minPos = $(e.currentTarget).offset().left,
+    maxPos = minPos + $('.player__scroll--volume').width(),
+    width = maxPos - minPos,
+    clickPos = (newPos / width) * 100,
+    volumeLevel = (clickPos / 100).toFixed(1);
+
+  videoEl.volume = volumeLevel;
+
+  $('.player__volume-btn').css('left', volumeLevel * 100 + '%');
+  volumeBtn.removeClass('player__volume--mute');
+
+  if (videoEl.volume === 0) {
+    volumeBtn.addClass('player__volume--mute');
+  }
+});
