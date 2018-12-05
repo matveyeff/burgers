@@ -8,6 +8,7 @@
 	@include tablets {
 		background: url('../img/bg_video.jpg') no-repeat;
 		background-size: cover;
+		background-position-x: right;
 	}
 }
 
@@ -30,6 +31,9 @@
 .work__video-window {
 	width: 59.97%;
 	height: 100%;
+	@include tablets {
+		width: 95%;
+	}
 }
 
 .player {
@@ -39,7 +43,10 @@
 	background-color: #3e3e3e;
 	padding: 0 1.25rem;
 	@include tablets {
-		width: 60%;
+		width: 95%;
+	}
+	@include phones {
+		width: 95%;
 	}
 }
 

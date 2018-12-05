@@ -44,6 +44,9 @@
 		@include tablets {
 			width: 5.7rem;
 		}
+				@include phones {
+			width: 4.5rem;
+		}
 	}
 	&__type-title {
     transform: rotate(-90deg);
@@ -71,7 +74,6 @@
 	width: 33.75rem;
 	@include phones {
 		z-index: 500;
-		width: 10rem;
 	}
 }
 

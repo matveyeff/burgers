@@ -912,10 +912,6 @@ h6 {
   background: url("../img/bg_team.jpg") center/cover;
   height: 100vh;
   position: relative; }
-  @media (max-width: 768px) {
-    .team {
-      background: url("../img/bg_team.jpg");
-      background-size: cover; } }
   .team__content {
     position: absolute;
     top: 0;
@@ -923,7 +919,7 @@ h6 {
     right: 0;
     width: 50%;
     background: rgba(47, 50, 52, 0.93);
-    padding: 7% 0 0 10%; }
+    padding: 6% 0 0 9%; }
     @media (max-width: 768px) {
       .team__content {
         width: 100%;
@@ -940,7 +936,7 @@ h6 {
     align-items: center; } }
 
 .accordeon__item {
-  margin-bottom: 2.8125rem; }
+  margin-bottom: 2.56rem; }
   @media (max-width: 768px) {
     .accordeon__item {
       display: flex;
@@ -949,24 +945,33 @@ h6 {
 
 .accordeon__title {
   display: flex;
+  align-items: center;
   color: #fff;
   font-family: 'Gagalin Regular', sans-serif;
   text-decoration: none;
   font-size: 0.875rem;
-  font-weight: 400;
-  margin-bottom: 0.9375rem; }
+  margin-bottom: 0.9375rem;
+  will-change: height; }
   .accordeon__title::before {
     content: "";
-    display: flex;
-    align-self: flex-end;
-    border-bottom: 0.4375rem solid transparent;
-    border-top: 0.4375rem solid #f9b43b;
-    border-right: 0.375rem solid transparent;
-    border-left: 0.375rem solid transparent;
-    margin-right: 0.75rem; }
+    border: 0.4rem solid transparent;
+    border-top-color: #f9b43b;
+    border-bottom-width: 0;
+    margin-right: 0.4rem;
+    transition: .25s ease; }
+    @media (max-width: 768px) {
+      .accordeon__title::before {
+        border: 0.5rem solid transparent;
+        border-top-color: #f9b43b;
+        border-bottom-width: 0; } }
   @media (max-width: 768px) {
     .accordeon__title {
       font-size: 1.78rem; } }
+
+.accordeon__wrapper {
+  overflow: hidden;
+  height: 0rem;
+  transition: height .25s ease; }
 
 .accordeon__desc {
   max-width: 13rem;
@@ -977,8 +982,8 @@ h6 {
       padding-left: 0; } }
 
 .accordeon__content {
-  color: #fff;
-  display: none; }
+  display: flex;
+  color: #fff; }
   @media (max-width: 768px) {
     .accordeon__content {
       flex-direction: column;
@@ -992,8 +997,8 @@ h6 {
       margin-right: 0; } }
 
 .accordeon__img {
-  width: 6.25rem;
-  height: 6.25rem;
+  min-width: 6.25rem;
+  min-height: 6.25rem;
   background-size: cover;
   background-position: center;
   border-radius: 50%; }
@@ -1006,19 +1011,23 @@ h6 {
   font-weight: 700;
   line-height: 1.5rem;
   margin-bottom: 0.5rem; }
+  @media (max-width: 768px) {
+    .accordeon__position {
+      font-size: 1rem; } }
 
 .accordeon__text {
   font-weight: 300; }
 
-.accordeon__item_active .accordeon__content {
-  display: flex; }
+.accordeon__item_active .accordeon__wrapper {
+  display: flex;
+  height: 6.25rem; }
   @media (max-width: 768px) {
-    .accordeon__item_active .accordeon__content {
-      flex-direction: column; } }
+    .accordeon__item_active .accordeon__wrapper {
+      flex-direction: column;
+      height: 11.25rem; } }
 
 .accordeon__item_active .accordeon__title::before {
-  transform: rotate(180deg);
-  align-self: flex-start; }
+  transform: rotate(180deg); }
 
 .accordeon__item_active .accordeon__title {
   color: #f9b43b; }
@@ -1066,6 +1075,9 @@ h6 {
   @media (max-width: 768px) {
     .menu-acc__type-cover {
       width: 5.7rem; } }
+  @media (max-width: 480px) {
+    .menu-acc__type-cover {
+      width: 4.5rem; } }
 
 .menu-acc__type-title {
   transform: rotate(-90deg);
@@ -1091,8 +1103,7 @@ h6 {
   width: 33.75rem; }
   @media (max-width: 480px) {
     .menu-acc__item_active .menu-acc__desc-wrapper {
-      z-index: 500;
-      width: 10rem; } }
+      z-index: 500; } }
 
 .menu-acc__item_active .menu-acc__type-title {
   color: #f9b43b; }
@@ -1552,7 +1563,8 @@ order__form-input.disabled,
   @media (max-width: 768px) {
     .video {
       background: url("../img/bg_video.jpg") no-repeat;
-      background-size: cover; } }
+      background-size: cover;
+      background-position-x: right; } }
 
 .work__player {
   position: relative;
@@ -1571,6 +1583,9 @@ order__form-input.disabled,
 .work__video-window {
   width: 59.97%;
   height: 100%; }
+  @media (max-width: 768px) {
+    .work__video-window {
+      width: 95%; } }
 
 .player {
   display: flex;
@@ -1580,7 +1595,10 @@ order__form-input.disabled,
   padding: 0 1.25rem; }
   @media (max-width: 768px) {
     .player {
-      width: 60%; } }
+      width: 95%; } }
+  @media (max-width: 480px) {
+    .player {
+      width: 95%; } }
 
 .player__play {
   margin-right: 0.625rem;
