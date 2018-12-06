@@ -477,6 +477,6 @@ $('.player__scroll--volume').mousedown(function (e) {
   volumeBtn.removeClass('player__volume--mute');
 
   if (videoEl.volume === 0) {
-    volumeBtn.addClass('player__volume--mute');
+		volumeBtn.addClass('player__volume--mute');
   }
 });

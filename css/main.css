@@ -378,7 +378,10 @@ template {
     font-weight: 500;
     color: #fff;
     text-transform: uppercase;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: color .15s ease; }
+    .menu__link:hover {
+      color: #e45028; }
     @media (max-width: 768px) {
       .menu__link {
         margin-bottom: 0.8rem;
